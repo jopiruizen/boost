@@ -2,22 +2,14 @@
 
 # dependencies
 /node_modules
-/npm
+/.pnp
+.pnp.js
 
 # testing
 /coverage
 
 # production
 /build
-/prep
-
-# build
-*xz
-*gz
-build*.flag
-
-# logs
-*.log
 
 # misc
 .DS_Store
@@ -29,5 +21,3 @@ build*.flag
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-*.swp
