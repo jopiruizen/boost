@@ -1,10 +1,15 @@
 import React from 'react';
+import { BrowserRouter, Route, Routes  } from 'react-router-dom';
+import PagesRoutes from './routes';
+import Notes from '../pages/notes';
 
 function App() {
   return (
-    <div className="App">
-      THIS IS REACT
-    </div>
+      <BrowserRouter>
+        <Routes>
+            <Route path={PagesRoutes.HOME} element={<Notes />} />
+        </Routes>
+      </BrowserRouter>
   );
 }
 
