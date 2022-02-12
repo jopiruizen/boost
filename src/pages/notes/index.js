@@ -6,11 +6,18 @@ import {
 } from '@mui/material';
 
 import useNotes from './useNotes';
+import { useStyles } from './styles';
 function Notes () {
-    const notes = useNotes();
+    const classes = useStyles();
+
+    const {
+        notesList,
+    } = useNotes();
+
     console.log('hello are you rendering me...');
+
     return (
-        <Grid>
+        <Grid className={classes.page}>
             HELLO THIS IS THE NOTE
         </Grid>
     );
