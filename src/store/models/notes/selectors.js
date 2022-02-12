@@ -1,7 +1,6 @@
 import { createSelector } from 'reselect';
 
 const noteDetails = state => state.notes.noteDetails;
- 
 export const getNoteDetails = createSelector(
   [ noteDetails ],
   data => data,

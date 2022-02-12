@@ -1,13 +1,24 @@
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { logInfo } from '../../utils/logs';
 
 function useNote () {
-    useEffect(() => {
+    const notes = useSelector(state => state.notes.notesList);
 
+    const { 
+        getNotesList,
+    } = useDispatch().notes;
+    
+    useEffect(() => {
+        getNotesList();
     }, []);
 
-    return {
+    useEffect(() => {
+        logInfo('Notes is Updated -> ', notes);
+    }, [notes]);
 
+    return {
+        notes,
     };
 }
 

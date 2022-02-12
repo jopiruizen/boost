@@ -5,7 +5,9 @@ import {
     Grid,
 } from '@mui/material';
 
+import useNotes from './useNotes';
 function Notes () {
+    const notes = useNotes();
     console.log('hello are you rendering me...');
     return (
         <Grid>
